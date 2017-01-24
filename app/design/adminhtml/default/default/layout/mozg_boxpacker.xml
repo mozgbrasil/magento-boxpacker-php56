@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+--> 
+<layout>
+    <adminhtml_boxpacker_packing_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>mozg_boxpacker/packing</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="mozg_boxpacker/adminhtml_packing" name="packing" />
+
+        </reference>
+    </adminhtml_boxpacker_packing_index>
+    <adminhtml_boxpacker_packing_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="mozg_boxpacker/adminhtml_packing_grid" name="packing_grid"/>
+        </block>
+    </adminhtml_boxpacker_packing_grid>
+    <!-- Packing add/edit action -->
+    <adminhtml_boxpacker_packing_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>mozg_boxpacker/packing</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="mozg_boxpacker/adminhtml_packing_edit" name="packing_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="mozg_boxpacker/adminhtml_packing_edit_tabs" name="packing_tabs"></block>
+        </reference>
+    </adminhtml_boxpacker_packing_edit>
+
+    <adminhtml_boxpacker_packing_comment_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>mozg_boxpacker/packing_comment</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="mozg_boxpacker/adminhtml_packing_comment" name="packing_comment_grid"/>
+        </reference>
+    </adminhtml_boxpacker_packing_comment_index>
+    <adminhtml_boxpacker_packing_comment_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="mozg_boxpacker/adminhtml_packing_comment_grid" name="packing_comment_grid"/>
+        </block>
+    </adminhtml_boxpacker_packing_comment_grid>
+    <adminhtml_boxpacker_packing_comment_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>mozg_boxpacker/packing_comment</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="mozg_boxpacker/adminhtml_packing_comment_edit" name="packing_comment_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="mozg_boxpacker/adminhtml_packing_comment_edit_tabs" name="packing_comment_tabs"></block>
+        </reference>
+    </adminhtml_boxpacker_packing_comment_edit>
+</layout>

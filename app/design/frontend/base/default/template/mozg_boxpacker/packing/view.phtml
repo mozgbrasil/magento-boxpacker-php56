@@ -1,0 +1,81 @@
+<?php
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+/**
+ * Packing view template
+ *
+ * @category    Mozg
+ * @package     Mozg_BoxPacker
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php $_packing = $this->getCurrentPacking();?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<div class="page-title packing-title">
+    <h1><?php echo $_packing->getReference(); ?></h1>
+</div>
+<div class="packing-view">
+    <div class="packing-enabled">
+        <?php echo Mage::helper('mozg_boxpacker')->__("Enabled");?>:<?php echo ($_packing->getEnabled() == 1) ? Mage::helper('mozg_boxpacker')->__('Yes') : Mage::helper('mozg_boxpacker')->__('No') ?>
+
+    </div>
+    <div class="packing-reference">
+        <?php echo Mage::helper('mozg_boxpacker')->__('Reference');?>:<?php echo $_packing->getReference();?>
+
+    </div>
+    <div class="packing-outer_width">
+        <?php echo Mage::helper('mozg_boxpacker')->__('OuterWidth');?>:<?php echo $_packing->getOuterWidth();?>
+
+    </div>
+    <div class="packing-outer_length">
+        <?php echo Mage::helper('mozg_boxpacker')->__('OuterLength');?>:<?php echo $_packing->getOuterLength();?>
+
+    </div>
+    <div class="packing-outer_depth">
+        <?php echo Mage::helper('mozg_boxpacker')->__('OuterDepth');?>:<?php echo $_packing->getOuterDepth();?>
+
+    </div>
+    <div class="packing-inner_width">
+        <?php echo Mage::helper('mozg_boxpacker')->__('InnerWidth');?>:<?php echo $_packing->getInnerWidth();?>
+
+    </div>
+    <div class="packing-inner_length">
+        <?php echo Mage::helper('mozg_boxpacker')->__('InnerLength');?>:<?php echo $_packing->getInnerLength();?>
+
+    </div>
+    <div class="packing-inner_depth">
+        <?php echo Mage::helper('mozg_boxpacker')->__('InnerDepth');?>:<?php echo $_packing->getInnerDepth();?>
+
+    </div>
+    <div class="packing-empty_weight">
+        <?php echo Mage::helper('mozg_boxpacker')->__('EmptyWeight');?>:<?php echo $_packing->getEmptyWeight();?>
+
+    </div>
+    <div class="packing-max_weight">
+        <?php echo Mage::helper('mozg_boxpacker')->__('MaxWeight');?>:<?php echo $_packing->getMaxWeight();?>
+
+    </div>
+    <div class="packing-price">
+        <?php echo Mage::helper('mozg_boxpacker')->__('Price');?>:<?php echo $_packing->getPrice();?>
+
+    </div>
+    <div class="packing-image">
+            <?php if ($_packing->getImage()) :?>
+        <a href="<?php echo Mage::helper('mozg_boxpacker/packing')->getFileBaseUrl().$_packing->getImage();?>">
+            <span><?php echo basename($_packing->getImage())?></span>
+        </a>
+    <?php endif;?>
+
+    </div>
+    <div class="packing-comment">
+        <?php echo Mage::helper('mozg_boxpacker')->__('Comment');?>:<?php echo $_packing->getComment();?>
+
+    </div>
+    <div class="packing-carriers">
+        <?php echo Mage::helper('mozg_boxpacker')->__("Carriers");?>:<?php echo Mage::getSingleton('mozg_boxpacker/packing_attribute_source_carriers')->getOptionText($_packing->getCarriers());?>
+
+    </div>
+
+</div>

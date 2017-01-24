@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+/**
+ * Packing link widget template
+ *
+ * @category    Mozg
+ * @package     Mozg_BoxPacker
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php $_packing = $this->getCurrentPacking();?>
+<?php if ($_packing) :?>
+    <div class="packing-widget-link">
+        <a href="<?php echo $_packing->getPackingUrl()?>"><?php echo $_packing->getReference()?></a>
+    </div>
+<?php endif;?>

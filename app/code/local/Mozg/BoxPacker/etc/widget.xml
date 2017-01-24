@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<widgets>
+    <boxpacker_packing_view type="mozg_boxpacker/packing_widget_view" translate="name description" module="mozg_boxpacker">
+        <name>Packing view</name>
+        <description>Packing view widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <packing_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Packing</label>
+                <type>label</type>
+                <helper_block>
+                    <type>mozg_boxpacker/adminhtml_packing_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Packing</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>120</sort_order>
+            </packing_id>
+        </parameters>
+    </boxpacker_packing_view>
+    <boxpacker_packing_link type="mozg_boxpacker/packing_widget_link" translate="name description" module="mozg_boxpacker">
+        <name>Packing link</name>
+        <description>Packing link widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <packing_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Packing</label>
+                <type>label</type>
+                <helper_block>
+                    <type>mozg_boxpacker/adminhtml_packing_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Packing</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>130</sort_order>
+            </packing_id>
+        </parameters>
+    </boxpacker_packing_link>
+</widgets>
