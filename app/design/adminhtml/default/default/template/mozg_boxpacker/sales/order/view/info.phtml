@@ -1,0 +1,142 @@
+<?php
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+?>
+
+<?php
+
+//dump(get_class_methods(get_class($this)));
+
+$params = $this->getRequest()->getParams();
+$order_id = $params['order_id'];
+
+$order = $this->getOrder();
+$payment = $order->getPayment();
+$mozg_unique_session_id = $payment->getAdditionalInformation('mozg_unique_session_id');
+$mozg_boxes = $payment->getAdditionalInformation('mozg_boxes');
+
+//dump($order->debug());
+//dump($mozg_boxes);
+
+?>
+
+<div class="entry-edit">
+    <div class="entry-edit">
+        <div class="entry-edit-head">
+            <h4>Embalagem (<?php echo count($mozg_boxes); ?>)</h4>
+        </div>
+        <fieldset>
+
+
+            <?php 
+
+            $counter = 1;
+            foreach ($mozg_boxes as $item) { 
+
+                //dump($item);
+
+                $largura_embalagem = $item['outerWidth'];
+                $comprimento_embalagem = $item['outerLength'];
+                $altura_embalagem = $item['outerDepth'];
+                $peso_embalagem = $item['Weight'];
+                $querystring_packit4me = $item['querystring_packit4me'];
+                
+                // code_shipping_method
+                $shipping_method = $order->getData('shipping_method');
+                $pieces = explode("_", $shipping_method);
+                $count_pieces = count($pieces) - 1;
+                $last_piece =$pieces[$count_pieces];
+                $search = '_' . $last_piece;
+                $replace = '';
+                $subject = $shipping_method;
+                $code_shipping_method = str_replace ( $search , $replace , $subject );
+                // code_shipping_method
+
+                //dump($code_shipping_method);
+
+                $unit_of_measure = Mage::getStoreConfig('carriers/'.$code_shipping_method.'/unit_of_measure');
+                $label_unit_of_measure = ($unit_of_measure == 'KGS') ? 'kg' : 'g';
+                $format =  'O peso combinado da embalagem e os itens dentro dela é %s %s';
+                $args_1 = $peso_embalagem;
+                $args_2 = $label_unit_of_measure;
+                $peso_combinado = sprintf($format, $args_1, $args_2);
+
+                $embalagem = array(
+                    'Embalagem'=>$item['reference'],
+                    'Itens'=>$item['itemsPacked'],
+                    'Resumo'=>$peso_combinado,
+                    'uniqid'=>$mozg_unique_session_id,
+                    );
+
+            ?>
+
+            <div id="order_correios_block">
+                <div class="order-correios-form" id="order_correios_form">
+                    <span class="field-row">
+                        <pre>
+                        <?php 
+
+                        $print_r_embalagem = print_r($embalagem,true);
+
+                        $search = 'Array';
+                        $replace = '';
+                        $subject = $print_r_embalagem;
+                        $print_r_embalagem = str_replace ( $search , $replace , $subject );
+
+                        echo $print_r_embalagem;
+
+                        ?>
+                        </pre>
+                    </span>
+                    <span class="field-row">
+                        <p class="form-buttons">
+                            <button type="button" class="scalable success" onclick="packit4me_<?php echo $counter; ?>()" style=""><span><span><span>Clique aqui para uma visualização em 3D da embalagem e seus produtos armazenados</span></span></span></button>
+                        </p>
+                    </span>
+                    <div class="divider"></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <?php
+
+            $url_packit4me = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'mozg_boxpacker/index/packit4me';
+
+            $url_packit4me .= '?' . $querystring_packit4me;
+
+            ?>
+
+            <script type="text/javascript">
+            //<![CDATA[
+
+                url_packit4me_<?php echo $counter; ?> = '<?php echo $url_packit4me; ?>';
+
+                function packit4me_<?php echo $counter; ?>(){
+
+                    console.log(arguments.callee.name);
+
+                    url = url_packit4me_<?php echo $counter; ?>;
+                    console.log(url);
+                    openPopupsMozg(url, 'WinXilinus', 'Link', 'Correios', 'correios');
+                }
+
+            //]]>
+            </script>
+
+
+<?php 
+
+$counter++;
+} 
+
+?>
+
+        </fieldset>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<?php echo $this->getChildHtml(); ?>
