@@ -1,0 +1,35 @@
+{
+    "name": "mozgbrasil/magento-boxpacker-php56",
+    "description": "Módulo de Gerenciamento de Embalagem/Caixa requerido para funcionamento dos métodos de entrega",
+    "version": "1.0.3",
+    "type": "magento-module",
+    "keywords": ["cerebrum", "mozg", "magento", "shipping", "entrega", "correios", "transporte"],
+    "homepage": "http://mozg.com.br",
+    "time": "2017-09-04 16:57:04",
+    "license": [
+        "proprietary"
+    ],
+    "authors": [
+        {
+            "name": "Marcio dos Santos Amorim",
+            "email": "suporte@mozg.com.br",
+            "homepage": "http://mozg.com.br",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "suporte@mozg.com.br",
+        "issues": "https://github.com/mozgbrasil/magento-boxpacker-php56/issues",
+        "forum": "http://mozg.com.br/forums/view/1",
+        "wiki": "http://wiki.mozg.com.br",
+        "irc": "irc://irc.freenode.org/mozgbrasil",
+        "source": "https://github.com/mozgbrasil/magento-boxpacker-php56",
+        "docs": "https://github.com/mozgbrasil/magento-boxpacker-php56/wiki",
+        "rss": "https://mozg.com.br/feed.xml"
+    },
+    "require" : {
+        "mozgbrasil/magento-base-php56": "1.0.3",
+        "mozgbrasil/magento-product-page-shipping-php56": "1.0.3",
+        "dvdoug/boxpacker": "*"
+    }
+}

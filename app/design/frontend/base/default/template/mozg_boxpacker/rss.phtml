@@ -1,0 +1,32 @@
+<?php
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+/**
+ * boxpacker rss feeds block
+ * @category    Mozg
+ * @package     Mozg_BoxPacker
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php $_feeds = $this->getFeeds();?>
+<?php if ($_feeds): ?>
+<table class="data-table rss-table" id="rss-table-boxpacker" style="margin-top:20px">
+    <col />
+    <col width="1" />
+    <thead>
+        <tr>
+            <th colspan="2"><?php echo Mage::helper('mozg_boxpacker')->__('BoxPacker Feeds') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($_feeds as $_feed): ?>
+        <tr>
+            <td><?php echo $_feed->getLabel() ?></td>
+            <td><a href="<?php echo $_feed->getUrl() ?>" class="link-rss"><?php echo Mage::helper('mozg_boxpacker')->__('Get Feed'); ?></a></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php endif; ?>

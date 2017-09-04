@@ -1,0 +1,12 @@
+## Modman Module Mozg
+app/code/local/Mozg/BoxPacker/	app/code/local/Mozg/BoxPacker/
+app/design/adminhtml/default/default/layout/mozg_boxpacker.xml	app/design/adminhtml/default/default/layout/mozg_boxpacker.xml
+app/design/adminhtml/default/default/template/mozg_boxpacker/	app/design/adminhtml/default/default/template/mozg_boxpacker/
+app/design/frontend/base/default/layout/mozg_boxpacker.xml	app/design/frontend/base/default/layout/mozg_boxpacker.xml
+app/design/frontend/base/default/template/mozg_boxpacker/	app/design/frontend/base/default/template/mozg_boxpacker/
+app/etc/modules/Mozg_BoxPacker.xml	app/etc/modules/Mozg_BoxPacker.xml
+app/locale/pt_BR/Mozg_BoxPacker.csv	app/locale/pt_BR/Mozg_BoxPacker.csv
+js/mozg_boxpacker/	js/mozg_boxpacker/
+skin/adminhtml/default/default/images/mozg_boxpacker/	skin/adminhtml/default/default/images/mozg_boxpacker/
+skin/frontend/base/default/css/mozg_boxpacker/	skin/frontend/base/default/css/mozg_boxpacker/
+skin/frontend/base/default/images/mozg_boxpacker/	skin/frontend/base/default/images/mozg_boxpacker/
