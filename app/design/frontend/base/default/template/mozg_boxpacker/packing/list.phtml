@@ -1,0 +1,36 @@
+<?php 
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+/**
+ * Packing list template
+ *
+ * @category    Mozg
+ * @package     Mozg_BoxPacker
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php $_packings = $this->getPackings(); ?>
+<div class="page-title packing-title">
+    <?php if (Mage::helper('mozg_boxpacker/packing')->isRssEnabled()) : ?>
+        <a href="<?php echo Mage::helper('mozg_boxpacker/packing')->getRssUrl();?>" class="link-rss"><?php echo Mage::helper('mozg_boxpacker')->__('Subscribe to RSS Feed')?></a>
+    <?php endif;?>
+    <h1><?php echo Mage::helper('mozg_boxpacker')->__('Packings') ?></h1>
+</div>
+<?php if ($_packings->getSize() > 0) :?>
+    <?php echo $this->getPagerHtml(); ?>
+    <div class="packing-list-container">
+    <?php foreach ($_packings as $_packing) : ?>
+        <div class="packing-list-item">
+            <a href="<?php echo $_packing->getPackingUrl()?>">
+                <?php echo $_packing->getReference();?>
+            </a><br />
+        </div>
+    <?php endforeach;?>
+    </div>
+    <?php echo $this->getPagerHtml(); ?>
+<?php else : ?>
+    <?php echo Mage::helper('mozg_boxpacker')->__('There are no packings at this moment');?>
+<?php endif;?>

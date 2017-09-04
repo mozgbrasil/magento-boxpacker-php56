@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+/**
+ * customer Packings comments template
+ * @category    Mozg
+ * @package     Mozg_BoxPacker
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<div class="page-title">
+    <h1><?php echo $this->__('My Packings Comments') ?></h1>
+</div>
+<?php if ( $this->getCollection() && $this->count()): ?>
+    <?php echo $this->getToolbarHtml() ?>
+    <table class="data-table" id="my-packing-comments-table">
+        <col width="1" />
+        <col width="1" />
+        <col />
+        <col width="1" />
+        <tbody>
+            <?php foreach ($this->getCollection() as $_comment): ?>
+            <tr>
+                <td><span class="nobr"><?php echo $this->dateFormat($_comment->getCtCreatedAt()); ?></span></td>
+                <td><h2 class="product-name"><a href="<?php echo $this->getPackingLink($_comment) ?>"><?php echo $this->escapeHtml($_comment->getReference()) ?></a></h2></td>
+                <td><?php echo Mage::helper('core')->escapeHtml($_comment->getCtTitle()) ?></td>
+                <td><a href="<?php echo $this->getCommentLink($_comment) ?>" class="nobr"><?php echo $this->__('View Details') ?></a></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <script type="text/javascript">decorateTable('my-packing-comments-table')</script>
+    <?php echo $this->getToolbarHtml() ?>
+<?php else: ?>
+    <p><?php echo $this->__('You have submitted no comments for packings.') ?></p>
+<?php endif; ?>
+<div class="buttons-set">
+    <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+</div>

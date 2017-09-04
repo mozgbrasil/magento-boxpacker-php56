@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mozg_boxpacker translate="title" module="mozg_boxpacker">
+                                        <title>BoxPacker</title>
+                                    </mozg_boxpacker>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <mozg_base>
+                        <children>
+                            <mozg_boxpacker translate="title">
+                                <title>Gerenciar Embalagem/Caixa</title>
+                                <sort_order>29</sort_order>
+                            </mozg_boxpacker>
+                            <shipping>
+                                <title>Shipping Methods</title>
+                                <sort_order>30</sort_order>
+                            </shipping>
+                        </children>
+                    </mozg_base>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <mozg_base>
+            <children>
+                <mozg_boxpacker translate="title" module="mozg_boxpacker">
+                    <title>Gerenciar Embalagem/Caixa</title>
+                    <action>adminhtml/boxpacker_packing</action>
+                    <sort_order>29</sort_order>
+                    <!--<children>
+                        <packing translate="title" module="mozg_boxpacker">
+                            <title>Packing</title>
+                            <action>adminhtml/boxpacker_packing</action>
+                            <sort_order>0</sort_order>
+                        </packing>
+                        <packing_comments translate="title" module="mozg_boxpacker">
+                            <title>Manage Packing Comments</title>
+                            <action>adminhtml/boxpacker_packing_comment</action>
+                            <sort_order>4</sort_order>
+                        </packing_comments>
+                    </children>-->
+                </mozg_boxpacker>
+                <shipping translate="title" module="mozg_base">
+                    <title>Shipping Methods</title>
+                    <action>adminhtml/system_config/edit/section/carriers</action>
+                    <sort_order>30</sort_order>
+                    <children>
+                    </children>
+                </shipping>
+            </children>
+        </mozg_base>
+    </menu>
+</config>

@@ -1,0 +1,140 @@
+Action,Açao
+Add Packing,Adicionar embalagem
+Add packing,Adicionar embalagem
+Allow Comments,Permitir comentários
+Allow guest comments,Permitir comentários de visitantes
+An error occurred while updating the packings.,Ocorreu um erro ao atualizar as embalagens.
+Approved,aprovado
+Are you sure?,Você tem certeza?
+CSV,CSV
+Carriers,Método de entrega
+Change Enabled,Alterar coluna Ativado
+Change status,Alterar estado
+Comentário,Comentario
+Comment can't be empty,Comentário não pode estar vazio
+Comment title can't be empty,Título do Comentário não pode estar vazio
+Comment was successfully deleted.,Comentário foi excluído com sucesso.
+Comment was successfully saved,Comentário foi salvo com sucesso
+Comment,Comentário
+Comments,Comentários
+Comprimento exterior em centímetros,Comprimento exterior em centímetros
+Comprimento interno em centímetros,Comprimento interno em centímetros
+Could not find comment to delete.,Não foi possível encontrar o comentário para excluir.
+Could not find packing to delete.,Não foi possível encontrar a embalagem para excluir.
+Created at,Criado em
+Customer profile,Perfil do cliente
+Delete File,Apagar Arquivo
+Delete Packing comment,Deletar comentário para a embalagem
+Delete Packing,Excluir embalagem
+Delete,Excluir
+Disabled,Desativado
+Edit Packing '%s',Editar embalagem '% s'
+Edit Packing comment '%s',Editar comentário para a embalagem '% s'
+Edit,Editar
+EmptyWeight,Peso vazio
+Enable rss,Ativar rss
+Enabled,Ativado
+Error saving packing,Erro ao salvar a embalagem
+Excel,Excel
+Guest comments are not allowed,Comentários de visistantes não são permitidos
+Home,Casa
+Id,Identidade
+Image,Imagem
+Imagem,Imagem
+Informe a descrição da embalagem,Informe a descrição da embalagem
+InnerDepth,Altura Interior
+InnerLength,Comprimento Interior
+InnerWidth,Largura Interior
+Largura exterior em centímetros,Largura exterior em centímetros
+Largura interna em centímetros,Largura interna em centímetros
+Leave empty for no prefix,Deixe em branco para nenhum prefixo
+Leave empty to use default URL module/controller/action,Deixe em branco para usar URL padrão module/controller/action
+MaxWeight,Peso máximo suportado para a embalagem
+Meta description for packings list page,Meta descrição de página da lista de embalagens
+Meta information,Meta informação
+Meta keywords for packings list page,Meta palavras-chave para página da lista de embalagens
+Meta title for packings list page,Meta título para a página da lista de embalagens
+Meta,Meta
+Meta-description,Meta Descrição
+Meta-keywords,Meta-palavras-chave
+Meta-title,Meta-título
+My Packing Comments,Meus Embalagens Comentários
+My Packings comment view,Meu Embalagens comentário vista
+No,Não
+None,Nenhum
+On %s you wrote:,Em% s que você escreveu:
+OuterDepth,Altura exterior
+OuterLength,Comprimento exterior
+OuterWidth,Largura exterior
+Packing Comment,Comentário para a embalagem 
+Packing Comments,Comentários para a embalagem 
+Packing comment,Comentário para a embalagem 
+Packing was saved,Embalagem foi salva
+Packing was successfully deleted.,Embalagem foi excluído com sucesso.
+Packing was successfully saved,Embalagem foi salvo com sucesso
+Packing,Embalagem
+Packings,Embalagens
+Pending,Pendente
+Peso da embalagem vazia,Peso da embalagem vazia
+Peso máximo suportado para a embalagem,Peso máximo suportado para a embalagem
+Please select comments to delete.,Por favor seleccione comentários para apagar.
+Please select comments.,Por favor seleccione comentários.
+Please select packings to delete.,Por favor seleccione embalagens excluir.
+Please select packings.,Por favor seleccione embalagens.
+Poster e-mail,Poster de e-mail
+Poster name,nome poster
+Preço da embalagem,Preço da Embalagem
+Price,Preço
+Altura exterior em centímetros,Altura exterior em centímetros
+Altura interior em centímetros,Altura interior em centímetros
+Reference,Referência
+Rejected,rejeitado
+Relative to Website Base URL,Em relação ao URL do site
+Reset,Reiniciar
+Save And Continue Edit,Salvar e continuar Editar
+Save Packing comment,Salve embalagem comentário
+Save Packing,Salvar Embalagem
+"Selecione o método de entrega que está relacionado a embalagem, a não seleção deve atender todos os métodos de entrega","Selecione o método de entrega que está relacionado a embalagem, a não seleção deve atender todos os métodos de entrega"
+Show in rss,Exibir em rss
+Status,Estado
+Store views,Visualizações de loja
+The URL key cannot consist only of numbers.,A chave URL não pode consistir apenas de números.
+The URL key contains capital letters or disallowed symbols.,A chave URL contém letras maiúsculas ou símbolos não permitidos.
+The packings has been deleted.,As embalagens foi excluída.
+There was a problem saving the comment.,Houve um problema ao salvar o comentário.
+There was a problem saving the packing.,Houve um problema ao guardar a embalagem.
+There was an error deleting comments.,Houve um erro ao excluir comentários.
+There was an error deleting packing.,Houve um erro ao excluir a embalagem.
+There was an error deleting packings.,Houve um erro ao excluir embalagens.
+There was an error deleting the comment.,Houve um erro ao excluir o comentário.
+There was an error updating comments.,Houve um erro ao atualizar comentários.
+There was an error updating packings.,Houve um erro ao atualizar embalagens.
+This comment no longer exists.,Este comentário não existe mais.
+This packing does not allow comments,Esta embalagem não permite comentários
+This packing no longer exists.,Esta embalagem não existe mais.
+Title,Título
+Total of %d comments were successfully deleted.,Total de% d comentários foram apagados com êxito.
+Total of %d comments were successfully updated.,Total de% d comentários foram atualizadas com sucesso.
+Total of %d packings were successfully deleted.,Total de% d embalagens foram apagados com êxito.
+Total of %d packings were successfully updated.,Total de% d embalagens foram atualizadas com sucesso.
+Total of %d record(s) have been deleted.,Total de% d registro (s) foram excluídos.
+Total of %d record(s) have been updated.,Total de% d registro (s) foram atualizados.
+URL key already exists.,Chave de URL já existe.
+URL key for list page,Chave de URL para a página da lista
+URL key,chave de URL
+URL prefix,prefixo de URL
+URL suffix,sufixo URL
+Unable to find comment to save.,Incapaz de encontrar o comentário para salvar.
+Unable to find packing to save.,Incapaz de encontrar a embalagem para guardar.
+Unable to post the comment.,Não é possível postar o comentário.
+Updated at,Atualizada às
+Use Breadcrumbs,Use Breadcrumbs
+Use default config,Usar configuração padrão
+View Details,Ver detalhes
+WYSIWYG Editor,editor WYSIWYG
+What goes after the dot. Leave empty for no suffix.,O que se passa depois do ponto. Deixe em branco para nenhum sufixo.
+XML,XML
+Yes,Sim
+You have submitted no comments for packings.,Você apresentaram comentários para embalagens.
+Your comment has been accepted for moderation.,O seu comentário foi aceito para moderação.
+Your name can't be empty,Seu nome não pode estar vazio

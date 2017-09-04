@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<layout>    
+    <customer_account>
+        <!--<reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="mozg_boxpacker"><name>packing_comments</name><path>mozg_boxpacker/packing_customer_comment</path><label>Packings Comments</label></action>
+        </reference>-->
+    </customer_account>
+    <mozg_boxpacker_packing_index translate="label" module="mozg_boxpacker">
+        <label>Packings list</label>
+        <update handle="page_two_columns_left" />
+        <reference name="content">
+            <block type="mozg_boxpacker/packing_list" name="packing_list" template="mozg_boxpacker/packing/list.phtml" />
+        </reference>
+    </mozg_boxpacker_packing_index>
+    <mozg_boxpacker_packing_view translate="label" module="mozg_boxpacker">
+        <label>Packing view page</label>
+        <update handle="page_two_columns_left" />
+        <reference name="content">
+            <block type="mozg_boxpacker/packing_view" name="packing_view" template="mozg_boxpacker/packing/view.phtml" />
+            <block type="mozg_boxpacker/packing_comment_list" name="packing.comments_list" as="packing_comment_list" template="mozg_boxpacker/packing/comment/list.phtml">
+                <block type="mozg_boxpacker/packing_comment_form" name="comment_form" as="comment_form" template="mozg_boxpacker/packing/comment/form.phtml" />
+            </block>
+        </reference>
+    </mozg_boxpacker_packing_view>
+    <mozg_boxpacker_packing_rss translate="label" module="mozg_boxpacker">
+        <label>Packings rss feed</label>
+        <block type="mozg_boxpacker/packing_rss" output="toHtml" name="mozg_boxpacker.packing.rss" />
+    </mozg_boxpacker_packing_rss>
+    <rss_index_index>
+        <reference name="content">
+            <block type="mozg_boxpacker/rss" name="boxpacker.rss" template="mozg_boxpacker/rss.phtml">
+                <action method="addFeed" ifconfig="mozg_boxpacker/packing/rss" translate="label" module="mozg_boxpacker">
+                    <label>Packings</label>
+                    <url helper="mozg_boxpacker/packing/getRssUrl" />
+                </action>
+            </block>
+        </reference>
+    </rss_index_index>
+    <mozg_boxpacker_packing_customer_comment_index translate="label" module="mozg_boxpacker">
+        <label>My Packings comments</label>
+        <update handle="customer_account"/>
+        <reference name="my.account.wrapper">
+            <block type="mozg_boxpacker/packing_customer_comment_list" name="customer_packing_comments" template="mozg_boxpacker/packing/customer/comment/list.phtml"/>
+        </reference>
+    </mozg_boxpacker_packing_customer_comment_index>
+    <mozg_boxpacker_packing_customer_comment_view translate="label" module="mozg_boxpacker">
+        <label>My Packings comment view</label>
+        <update handle="customer_account"/>
+        <reference name="my.account.wrapper">
+            <block type="mozg_boxpacker/packing_customer_comment_view" name="customer_packing_comment" template="mozg_boxpacker/packing/customer/comment/view.phtml"/>
+        </reference>
+    </mozg_boxpacker_packing_customer_comment_view>
+</layout>
